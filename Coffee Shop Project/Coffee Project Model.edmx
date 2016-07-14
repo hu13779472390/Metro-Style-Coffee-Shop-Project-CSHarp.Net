@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TblProduct">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductType" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Image" Type="image" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblProductType">
+          <Key>
+            <PropertyRef Name="ProductType" />
+          </Key>
+          <Property Name="ProductType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductDescription" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblTransactionItem">
+          <Key>
+            <PropertyRef Name="TransactionItemID" />
+          </Key>
+          <Property Name="TransactionItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TblProduct_TblProductType">
+          <End Role="TblProductType" Type="Self.TblProductType" Multiplicity="1" />
+          <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProductType">
+              <PropertyRef Name="ProductType" />
+            </Principal>
+            <Dependent Role="TblProduct">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblTransactionItem_TblProduct">
+          <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="1" />
+          <End Role="TblTransactionItem" Type="Self.TblTransactionItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProduct">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="TblTransactionItem">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblTransactionItem_TblTransaction">
+          <End Role="TblTransaction" Type="Self.TblTransaction" Multiplicity="1" />
+          <End Role="TblTransactionItem" Type="Self.TblTransactionItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblTransaction">
+              <PropertyRef Name="TransactionID" />
+            </Principal>
+            <Dependent Role="TblTransactionItem">
+              <PropertyRef Name="TransactionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblProduct" EntityType="Self.TblProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblProductType" EntityType="Self.TblProductType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTransaction" EntityType="Self.TblTransaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTransactionItem" EntityType="Self.TblTransactionItem" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblProduct_TblProductType" Association="Self.FK_TblProduct_TblProductType">
+            <End Role="TblProductType" EntitySet="TblProductType" />
+            <End Role="TblProduct" EntitySet="TblProduct" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblTransactionItem_TblProduct" Association="Self.FK_TblTransactionItem_TblProduct">
+            <End Role="TblProduct" EntitySet="TblProduct" />
+            <End Role="TblTransactionItem" EntitySet="TblTransactionItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblTransactionItem_TblTransaction" Association="Self.FK_TblTransactionItem_TblTransaction">
+            <End Role="TblTransaction" EntitySet="TblTransaction" />
+            <End Role="TblTransactionItem" EntitySet="TblTransactionItem" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TblProduct">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductType" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="TblProductType" Relationship="Self.FK_TblProduct_TblProductType" FromRole="TblProduct" ToRole="TblProductType" />
+          <NavigationProperty Name="TblTransactionItems" Relationship="Self.FK_TblTransactionItem_TblProduct" FromRole="TblProduct" ToRole="TblTransactionItem" />
+        </EntityType>
+        <EntityType Name="TblProductType">
+          <Key>
+            <PropertyRef Name="ProductType" />
+          </Key>
+          <Property Name="ProductType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TblProducts" Relationship="Self.FK_TblProduct_TblProductType" FromRole="TblProductType" ToRole="TblProduct" />
+        </EntityType>
+        <EntityType Name="TblTransaction">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TblTransactionItems" Relationship="Self.FK_TblTransactionItem_TblTransaction" FromRole="TblTransaction" ToRole="TblTransactionItem" />
+        </EntityType>
+        <EntityType Name="TblTransactionItem">
+          <Key>
+            <PropertyRef Name="TransactionItemID" />
+          </Key>
+          <Property Name="TransactionItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TblProduct" Relationship="Self.FK_TblTransactionItem_TblProduct" FromRole="TblTransactionItem" ToRole="TblProduct" />
+          <NavigationProperty Name="TblTransaction" Relationship="Self.FK_TblTransactionItem_TblTransaction" FromRole="TblTransactionItem" ToRole="TblTransaction" />
+        </EntityType>
+        <Association Name="FK_TblProduct_TblProductType">
+          <End Role="TblProductType" Type="Self.TblProductType" Multiplicity="1" />
+          <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProductType">
+              <PropertyRef Name="ProductType" />
+            </Principal>
+            <Dependent Role="TblProduct">
+              <PropertyRef Name="ProductType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblTransactionItem_TblProduct">
+          <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="1" />
+          <End Role="TblTransactionItem" Type="Self.TblTransactionItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblProduct">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="TblTransactionItem">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblTransactionItem_TblTransaction">
+          <End Role="TblTransaction" Type="Self.TblTransaction" Multiplicity="1" />
+          <End Role="TblTransactionItem" Type="Self.TblTransactionItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblTransaction">
+              <PropertyRef Name="TransactionID" />
+            </Principal>
+            <Dependent Role="TblTransactionItem">
+              <PropertyRef Name="TransactionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Coffee_ProjectEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TblProducts" EntityType="Self.TblProduct" />
+          <EntitySet Name="TblProductTypes" EntityType="Self.TblProductType" />
+          <EntitySet Name="TblTransactions" EntityType="Self.TblTransaction" />
+          <EntitySet Name="TblTransactionItems" EntityType="Self.TblTransactionItem" />
+          <AssociationSet Name="FK_TblProduct_TblProductType" Association="Self.FK_TblProduct_TblProductType">
+            <End Role="TblProductType" EntitySet="TblProductTypes" />
+            <End Role="TblProduct" EntitySet="TblProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblTransactionItem_TblProduct" Association="Self.FK_TblTransactionItem_TblProduct">
+            <End Role="TblProduct" EntitySet="TblProducts" />
+            <End Role="TblTransactionItem" EntitySet="TblTransactionItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblTransactionItem_TblTransaction" Association="Self.FK_TblTransactionItem_TblTransaction">
+            <End Role="TblTransaction" EntitySet="TblTransactions" />
+            <End Role="TblTransactionItem" EntitySet="TblTransactionItems" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Coffee_ProjectEntities1">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProducts">
+            <EntityTypeMapping TypeName="Model.TblProduct">
+              <MappingFragment StoreEntitySet="TblProduct">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProductTypes">
+            <EntityTypeMapping TypeName="Model.TblProductType">
+              <MappingFragment StoreEntitySet="TblProductType">
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTransactions">
+            <EntityTypeMapping TypeName="Model.TblTransaction">
+              <MappingFragment StoreEntitySet="TblTransaction">
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTransactionItems">
+            <EntityTypeMapping TypeName="Model.TblTransactionItem">
+              <MappingFragment StoreEntitySet="TblTransactionItem">
+                <ScalarProperty Name="TransactionItemID" ColumnName="TransactionItemID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

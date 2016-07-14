@@ -1,0 +1,60 @@
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe.config
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.pdb
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\MetroFramework.dll
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csprojResolveAssemblyReference.cache
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Properties.Resources.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csproj.GenerateResource.Cache
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.exe
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.pdb
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\EntityFramework.dll
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\MetroFramework.Design.dll
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\MetroFramework.Fonts.dll
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\EntityFramework.xml
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Add_Product.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.MainManu.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Display_Product.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.POS.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Payment.resources
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+E:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.DisplaySales.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe.config
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.exe
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.pdb
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.pdb
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\EntityFramework.dll
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\EntityFramework.xml
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csprojResolveAssemblyReference.cache
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Add_Product.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Display_Product.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.DisplaySales.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.MainManu.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Payment.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.POS.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Properties.Resources.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csproj.GenerateResource.Cache
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe.config
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee Shop Project.exe
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee Shop Project.pdb
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee Shop Project.csprojResolveAssemblyReference.cache
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Add_Product.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Display_Product.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.DisplaySales.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.MainManu.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Payment.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.POS.resources
+F:\Samesters\Projects\Visual Studio 2015\Projects\Coffee Shop Project - Copy\Coffee Shop Project\obj\Debug\Coffee Shop Project.csproj.GenerateResource.Cache
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\bin\Debug\Coffee Shop Project.exe.config
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.exe
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.pdb
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csprojResolveAssemblyReference.cache
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Add_Product.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Display_Product.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.DisplaySales.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.MainManu.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Payment.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.POS.resources
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee Shop Project.csproj.GenerateResource.Cache
+F:\Visual Studio 2015 Projects\Coffee Shop Project\Coffee Shop Project\obj\Debug\Coffee_Shop_Project.Properties.Resources.resources
